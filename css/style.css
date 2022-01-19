@@ -135,6 +135,7 @@ h3 {
 	font-size: 32px;
 	padding: 10px;
 	font-weight: 600;
+	line-height: 42px;
 }
 
 p {
@@ -376,7 +377,6 @@ a.btn {
     z-index: 1000;
     top: 50%;
     right: 0;
-    color: #BFAFB2;
 }
 .slick-prev {
 	background: url("/img/left-arrow.svg") no-repeat center;
@@ -384,7 +384,6 @@ a.btn {
     z-index: 1000;
     top: 50%;
     left: 0;
-    color: #BFAFB2;
 }
 
 .slick-next, .slick-prev {
@@ -397,4 +396,51 @@ a.btn {
 	padding: 0;
 	border: none;
 	outline: none;
+}
+.bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.bottom .left {
+	color: #BE3232;
+	font-weight: 500;
+}
+
+.shopping {
+	background-color: #003C64;
+    height: auto;
+    position: relative;
+}
+
+.txt-button {
+	color: white;
+    /* background-color: salmon; */
+    /* padding-left: calc((100% - 1245px)/2); */
+}
+
+.txt-button p {
+	padding: 10px;
+}
+
+.shopping .inner {
+	max-width: 1245px;
+	width: 92%;
+	/* margin: 0 auto; */
+	position: relative;
+	display: flex;
+	padding-left: calc((100% - 1245px)/2);
+}
+
+.products {
+	display: flex;
+    width: 92%;
+    max-width: 1245px;
+    margin: 0 auto;
+    /* position: absolute; */
+    /* left: 4%; */
+    justify-content: space-between;
+    transform: translateY(50%);
 }
