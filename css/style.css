@@ -134,6 +134,7 @@ h1 {
 h3 {
 	font-size: 32px;
 	padding: 10px;
+	font-weight: 600;
 }
 
 p {
@@ -277,7 +278,7 @@ a.btn {
 	font-size: 16px;
 	font-family: "Spartan";
 }
-
+/* Allcont */
 .allcont {
 	padding: 200px 0 0
 }
@@ -298,7 +299,6 @@ a.btn {
 }
 
 .text h3{
-	font-weight: 600;
 	margin-bottom: 20px;
 }
 
@@ -316,4 +316,85 @@ a.btn {
 
 .img-txt .txt {
 	padding: 70px 110px 150px 115px;
+}
+
+.txt h3 {
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+/* Slider */
+.logo-wrapper {
+	padding: 10px 0;
+	margin: 50px 0;
+	height: auto;
+}
+
+.logos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.logo-box {
+	padding: 10px;
+	margin: 10px;
+	flex:calc(40% - 10px);
+}
+
+.txt-logo {
+	padding-left: 50px;
+}
+
+.h3-logo {
+
+}
+
+.blue-box {
+	color: white;
+	display: flex;
+	width: 50%;
+	height: auto;
+	align-items: center;
+}
+
+.profile-txt {
+	display: flex;
+	background-color: #003C64;
+}
+
+.profile-img {
+	padding: 10px;
+}
+
+.bluebox-txt{
+	padding: 5px;
+}
+
+.slick-next {
+	background: url("/img/right-arrow.svg") no-repeat center;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    right: 0;
+    color: #BFAFB2;
+}
+.slick-prev {
+	background: url("/img/left-arrow.svg") no-repeat center;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 0;
+    color: #BFAFB2;
+}
+
+.slick-next, .slick-prev {
+	height: 45px;
+	width: 34px;
+	line-height: 0px;
+	font-size: 0px;
+	cursor: pointer;
+	color: transparent;
+	padding: 0;
+	border: none;
+	outline: none;
 }
