@@ -1,3 +1,18 @@
 .teaser {
 	background: url("/Bilder/teaser37.png") no-repeat left center / cover;
+	margin: 10px 10px;
+	border-radius: 30px;
+	height: 405px;
+	color: white;
+	display: flex;
+}
+
+.teaser h3 {
+	font-size: 28px;
+}
+
+.teaser-txt-btn {
+	display: inline-block;
+	align-self: flex-end;
+	padding: 20px;
 }
