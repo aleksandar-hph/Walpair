@@ -248,6 +248,7 @@ body {
 	color: white;
 }
 
+
 .large-text {
 	font-size: 72px;
 	margin: 5px 0px;
@@ -262,6 +263,18 @@ body {
 /* 	line-height: 55px; */
 }
 
+.flug-icon{
+	width: 90px;
+	height: 113px;
+	position: absolute;
+	left: 48%;
+	top: 83%;
+}
+
+.flug-icon img {
+	width: 100%;
+	height: 100%;
+}
 
 a.btn {
 	background-color: #BE3232;
@@ -353,6 +366,64 @@ a.btn {
 }
 
 .blue-box {
+    color: white;
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: flex-end;
+}
+
+.profile-txt {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #003C64;
+}
+
+.profile-img {
+    padding: 0 30px;
+}
+
+.bluebox-txt {
+    padding: 40px 40px 40px 0;
+}
+
+.bluebox-txt p {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 20px;
+	padding-right: 5px;
+}
+
+.bluebox-txt p:after  {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 60px;
+    background-image: url(../img/quote.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    z-index: -1;
+}
+
+.bluebox-txt img {
+    display: block;
+    margin-left: auto;
+    padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+/* .blue-box {
 	color: white;
 	display: flex;
 	width: 50%;
@@ -371,7 +442,7 @@ a.btn {
 
 .bluebox-txt{
 	padding: 5px;
-}
+} */
 
 .slick-next {
 	background: url("/img/right-arrow.svg") no-repeat center;
@@ -421,6 +492,10 @@ a.btn {
 	color: white;
     /* background-color: salmon; */
     /* padding-left: calc((100% - 1245px)/2); */
+}
+
+.txt-button h3 {
+	padding-top: 50px;
 }
 
 .txt-button p {
