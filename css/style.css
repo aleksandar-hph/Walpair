@@ -271,6 +271,10 @@ body {
 	top: 83%;
 }
 
+.flug-icon:hover {
+	top: 85%;
+}
+
 .flug-icon img {
 	width: 100%;
 	height: 100%;
@@ -294,7 +298,7 @@ a.btn {
 }
 /* Allcont */
 .allcont {
-	padding: 200px 0 0
+	padding: 85px 0 0
 }
 
 .icon-txt-img {
@@ -344,6 +348,15 @@ a.btn {
 	padding: 10px 0;
 	margin: 50px 0;
 	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.slider {
+	width: 50%;
+	margin-right: 70px;
 }
 
 .logos {
@@ -368,7 +381,7 @@ a.btn {
 .blue-box {
     color: white;
     display: flex;
-    width: 50%;
+    width: 40%;
     height: auto;
     align-items: flex-end;
 }

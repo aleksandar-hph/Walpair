@@ -1,10 +1,26 @@
 .teaser {
-	background: url(../Bilder/teaser37.png) no-repeat left center / cover;
-	margin: 10px 10px;
+	/* background: url(../Bilder/teaser37.png) no-repeat left center / cover; */
+	margin: 10px 15px;
 	border-radius: 30px;
 	height: 405px;
 	color: white;
 	display: flex;
+}
+
+.teaser-1 {
+	background: url(../Bilder/teaser1.png) no-repeat left center / cover;
+}
+
+.teaser-2 {
+	background: url(../Bilder/teaser2.jpg) no-repeat left center / cover;
+}
+
+.teaser-3 {
+	background: url(../Bilder/teaser3.png) no-repeat left center / cover;
+}
+
+.teaser-4 {
+	background: url(../Bilder/teaser4.png) no-repeat left center / cover;
 }
 
 .teaser h3 {
@@ -15,4 +31,43 @@
 	display: inline-block;
 	align-self: flex-end;
 	padding: 20px;
+}
+
+.inner2 {
+	max-width: 1050px;
+	width: 92%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+}
+
+.icon-txt-img .icon {
+	padding: 0;
+	position: absolute;
+	left: 5%;
+}
+
+.icon-txt-img {
+	margin-top: 13px;
+}
+
+/* Slider */
+
+.slick-prev {
+	top: 40%;
+	left: 5%;
+}
+
+.slick-next {
+	top: 40%;
+	right: 9%;
+}
+
+
+.logo-wrapper {
+	margin-top: 80px;
+}
+
+.foot {
+	margin-top: 85px;
 }
