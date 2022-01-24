@@ -5,8 +5,12 @@
 	height: 405px;
 	color: white;
 	display: flex;
+	transition: transform .4s ease;
 }
 
+.teaser:hover {
+	transform: scale(1.1);
+}
 .teaser-1 {
 	background: url(../Bilder/teaser1.png) no-repeat left center / cover;
 }
