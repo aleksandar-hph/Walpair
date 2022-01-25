@@ -118,24 +118,26 @@
 		 url('../fonts/spartan-v7-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
 		 url('../fonts/spartan-v7-latin-900.svg#Spartan') format('svg'); /* Legacy iOS */
   }
+
+
 /*---ALLGEMEIN----*/
 
 :root {
 	font-family: 'Spartan';
 	font-size: 17px;
+	scroll-behavior: smooth;
 }
 
 h1 {
 	font-size: 42px;
-	padding: 10px;
 	margin-bottom: 50px;
 }
 
 h3 {
 	font-size: 32px;
-	padding: 10px;
 	font-weight: 600;
 	line-height: 42px;
+	margin-bottom: 50px;
 }
 
 p {
@@ -158,8 +160,9 @@ p {
 }
 
 li a {
+	font-weight: 700;
 	text-decoration: none;
-	color: white;
+	color: #ffffff;
 	padding: 10px;
 	transition: display 0.4s ease;
 }
@@ -190,16 +193,17 @@ body {
 
 /*---Logo-----*/
 .logo {
-	background:url("/img/logo_neg_rgb.svg") no-repeat left center / contain;
+	background:url("../img/logo_neg_rgb.svg") no-repeat left center / contain;
 	width: 141px;
 	height: 71px;
+	display: block;
 }
 
-.logo a span{
+.logo span {
 	display: none;
 }
 
-.logo a{
+.logo a {
 	width: 100%;
 	height: 100%;
 }
@@ -211,19 +215,40 @@ body {
 
 #nav ul {
 	display: flex;
+	align-items: center;
 }
 
-#nav li {
-	padding-right: 15px;
+#nav li + li {
+	margin-left: 50px;
 }
 
 #nav a {
-	margin-right: 50px;
+	display: inline-block;
+	font-size: 16px;
+	box-sizing: border-box;
+	padding: 10px;
+	position: relative;
 }
 
-#nav li:last-child {
-	margin-right: -50px;
-  }
+#nav li a:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-top: 5px;
+	height: 5px;
+	width: 100%;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	transform: scaleX(0);
+	transition: transform 250ms ease;
+}
+
+#nav li a:hover:after {
+	transform: scaleX(1);
+	transform-origin:  0% 50%;
+}
 
 /*---Subhead----*/
 
@@ -245,7 +270,7 @@ body {
 
 .text-button {
 	font-family: "Manrope";
-	color: white;
+	color: #ffffff;
 }
 
 
@@ -259,7 +284,6 @@ body {
 .mid-text {
 	font-size: 40px;
 	margin-top: 35px;
-	margin-bottom: 30px;
 /* 	line-height: 55px; */
 }
 
@@ -284,14 +308,13 @@ body {
 a.btn {
 	background-color: #BE3232;
 	padding: 10px 30px;
-	color: white;
-	margin: 10px 0px;
+	margin-top: 25px;
+	color: #ffffff;
 	border: none;
 	padding: 15px 40px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 30px;
 	font-size: 16px;
@@ -299,6 +322,11 @@ a.btn {
 	transition: background 0.4s ease;
 }
 
+
+.btn:hover {
+	background: #DC5050;
+	transition: background 0.4s ease;
+}
 
 .underline-icon {
 	height: 20px;
@@ -311,71 +339,104 @@ li a:hover + .underline-icon{
 	
 }
 
-.btn:hover {
-	background: #c43636;
-	transition: background 0.4s ease;
-}
-/* Allcont */
-.allcont {
-	padding: 85px 0 0
-}
-
 .icon-txt-img {
-	margin-top: 100px;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 100px 0 100px 100px;
 }
 
 .icon {
 	padding: 0 50px;
 }
 
-.icon-txt-img p {
-	padding: 10px;
-	margin-right: 80px;
-	line-height: 28px;
+.text-w700 {
+	max-width: 700px;
+	padding-left: 100px;
+	position: relative;
 }
 
-.text h3{
-	margin-bottom: 20px;
+.text-w700 p:before {
+	content: '';
+	display: block;
+	width: 28px;
+	height: 177px;
+	background-image: url(../img/side_text.svg);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
 }
 
-.allcont .img img{
-	-webkit-box-shadow: -13px 50px 0px 13px #003C64; 
-	box-shadow: -13px 50px 0px 13px #003C64;
+.img-shadow {
+	position: relative;
+	z-index: 1;
+	height: 100%;
 }
 
+.img-shadow img {
+	padding-bottom: 85px;
+}
 
+.img-shadow:after {
+	content: '';
+	display: block;
+	width: calc(100% + 42px); /* + padding of 42px */
+	height: 70%;
+	background-color: #003C64;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+
+.shadow-left:after {
+	left: -42px;
+}
+
+.shadow-right:after {
+	right: -42px;
+}
 
 .img-txt {
-	background-color: rgba(250, 250, 250, 1);
-	margin-top: 180px;
 	display: flex;
-	padding-top: 80px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 100px 0;
 }
 
 .img-txt .txt {
-	padding: 70px 110px 150px 115px;
+	padding: 0 100px 0 112px;
 }
 
-.txt h3 {
-	margin-bottom: 30px;
-	padding: 0;
+.grey-bg {
+	padding-top: 75px;
+	padding-bottom: 75px;
+	background-color: rgba(250, 250, 250, 1);
 }
 
 /* Slider */
 .logo-wrapper {
-	padding: 10px 0;
-	margin: 50px 0;
+	margin: 100px 0;
+	padding: 0 100px;
 	height: auto;
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	flex-direction: row-reverse;
+	flex-direction: column;
+}
+
+.logo-wrapper h3 {
+	padding-left: 100px;
+}
+
+.trust-wrapper {
+	display: flex;
+	justify-content: space-between;
 }
 
 .slider {
-	width: 50%;
-	margin-right: 70px;
+	max-width: 50%;
+}
+
+.slick-list {
+	margin: 0 84px;
 }
 
 .logos {
@@ -389,16 +450,8 @@ li a:hover + .underline-icon{
 	flex:calc(40% - 10px);
 }
 
-.txt-logo {
-	padding-left: 50px;
-}
-
-.h3-logo {
-
-}
-
 .blue-box {
-    color: white;
+    color: #ffffff;
     display: flex;
     width: 40%;
     height: auto;
@@ -435,9 +488,10 @@ li a:hover + .underline-icon{
     height: 60px;
     background-image: url(../img/quote.svg);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     position: absolute;
-    top: -30px;
-    left: -20px;
+    top: -40px;
+    left: -22px;
     z-index: -1;
 }
 
@@ -456,7 +510,7 @@ li a:hover + .underline-icon{
 
 
 /* .blue-box {
-	color: white;
+	color: #ffffff;
 	display: flex;
 	width: 50%;
 	height: auto;
@@ -477,17 +531,20 @@ li a:hover + .underline-icon{
 } */
 
 .slick-next {
-	background: url("/img/right-arrow.svg") no-repeat center;
+	background: url("../img/right-arrow.svg") no-repeat center;
     position: absolute;
     z-index: 1000;
     top: 50%;
+	transform: translateY(-50%);
     right: 0;
 }
+
 .slick-prev {
-	background: url("/img/left-arrow.svg") no-repeat center;
+	background: url("../img/left-arrow.svg") no-repeat center;
     position: absolute;
     z-index: 1000;
     top: 50%;
+	transform: translateY(-50%);
     left: 0;
 }
 
@@ -502,6 +559,7 @@ li a:hover + .underline-icon{
 	border: none;
 	outline: none;
 }
+
 .bottom {
 	display: flex;
 	justify-content: space-between;
@@ -515,15 +573,33 @@ li a:hover + .underline-icon{
 }
 
 .shopping {
-	background-color: #003C64;
-    height: auto;
     position: relative;
 }
 
+.shopping .inner {
+	box-sizing: border-box;
+	padding: 0 100px;
+	max-width: 910px;
+	width: auto;
+	display: block;
+	background-color: #003C64;
+	margin: 0;
+}
+
+.shopping .inner:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 150px;
+	background-color: #003C64;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
 .txt-button {
-	color: white;
-    /* background-color: salmon; */
-    /* padding-left: calc((100% - 1245px)/2); */
+	color: #ffffff;
+	padding: 50px 0;
 }
 
 .txt-button h3 {
@@ -534,34 +610,20 @@ li a:hover + .underline-icon{
 	padding: 10px;
 }
 
-.shopping .inner {
-	max-width: 1245px;
-	width: 92%;
-	/* margin: 0 auto; */
-	position: relative;
-	display: flex;
-	padding-left: calc((100% - 1245px)/2);
-}
 
 .products {
 	display: flex;
-    width: 92%;
-    max-width: 1245px;
-    margin: 0 auto;
-    /* position: absolute; */
-    /* left: 4%; */
-    justify-content: space-around;
-    transform: translateY(50%);
-	
+    justify-content: space-between;
+	padding: 0 100px;
 }
+
 .product {
-	background-color: white;
+	background-color: #ffffff;
 	/* padding: 35px; */
 	display: flex;
 	flex-direction: column;
 	border-radius: 20px;
-	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.48); 
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.48);
+	box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.1);
 }
 
 .product img {
@@ -582,14 +644,26 @@ li a:hover + .underline-icon{
 
 .foot {
 	background-color: #003C64;
-	margin-top: 300px;
-	color: white;
+	margin-top: 100px;
+	color: #ffffff;
 	font-family: "Manrope";
 	font-size: 15;
+	overflow: hidden;
 }
 
 .foot h5 {
 	font-size: 18px;
+	padding-bottom: 25px;
+}
+
+.foot h5:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #ffffff;
+	position: absolute;
+	margin-top: 12px;
 }
 
 .foot p {
@@ -604,5 +678,5 @@ li a:hover + .underline-icon{
 
 .foot a {
 	text-decoration: none;
-	color: white;
+	color: #ffffff;
 }
