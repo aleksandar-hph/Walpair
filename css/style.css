@@ -364,7 +364,7 @@ li a:hover + .underline-icon{
 	position: relative;
 }
 
-.text-w700 p:before {
+/* .text-w700 p:before {
 	content: '';
 	display: block;
 	width: 28px;
@@ -373,29 +373,41 @@ li a:hover + .underline-icon{
 	background-repeat: no-repeat;
 	position: absolute;
 	left: 0;
+} */
+
+
+ .airplane:before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 177px;
+    background-image: url(../img/side_text.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
 }
 
 #index .teaser-wrapper:before {
 	background-image: url(../img/flugzeug_home.svg);
 }
 
-#entertainment .text-w700 p:before {
+#entertainment .airplane:before {
 	background-image: url(../img/flugzeug_entertainment.svg);
 }
 
-#feature .text-w700 p:before {
+#feature .airplane:before {
 	background-image: url(../img/flugzeug_feature.svg);
 }
 
-#lifestyle .text-w700 p:before {
+#lifestyle .airplane:before {
 	background-image: url(../img/flugzeug_lifestyle.svg);
 }
 
-#reisen .text-w700 p:before {
+#reisen .airplane:before {
 	background-image: url(../img/flugzeug_reisen.svg);
 }
 
-#shopping .text-w700 p:before {
+#shopping .airplane:before {
 	background-image: url(../img/flugzeug_shopping.svg);
 }
 
